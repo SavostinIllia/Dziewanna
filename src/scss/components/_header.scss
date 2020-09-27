@@ -1,15 +1,16 @@
 header {
     position: fixed;
+    padding-bottom: 10px;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     z-index: 10;
     width: 100%;
-
+    @include animationTransition;
 
     .header-wrapper {
         @include displayFlex($flexElementAlign: center);
-        padding: 0 60px;
+        @include animationTransition;
 
         .header__navigation {
             @include displayFlex($flexElementJustify: inherit);
@@ -53,7 +54,59 @@ header {
                 @include displayFlex;
                 max-width: 175px;
 
+                li {
+                    a {
+                        svg {
+                            path {
+                                @include animationTransition;
+                            }
+                        }
+                    }
+                }
             }
         }
+
+        &.white {
+            @include animationTransition;
+
+            .header__navigation {
+                ul {
+                    li {
+                        a {
+                            color: #fff
+                        }
+                    }
+                }
+            }
+
+            .header__logo {
+                a {
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .header__client-navigation {
+                li {
+                    a {
+                        svg {
+                            path {
+                                @include animationTransition;
+                                fill: #fff;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    &.header-scrolled {
+        background: #fff;
+        @include animationTransition;
+        border-bottom: 1.5px solid #eee;
     }
 }

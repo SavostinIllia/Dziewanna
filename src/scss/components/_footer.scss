@@ -1,0 +1,46 @@
+footer {
+    background: #0D0C0C;
+    padding-top: 80px;
+
+    .footer__wrapper {
+        @include displayFlex(auto, center, flex-start);
+        margin-left: -20px;
+
+        &-navigation {
+            flex-basis: calc(33.33% - 20px);
+            margin-left: 20px;
+
+
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #fff;
+                padding-bottom: 30px;
+            }
+
+            ul {
+                li {
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #fff;
+                        padding-bottom: 10px;
+                        display: block;
+                    }
+
+                    &:last-child {
+                        a {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: #fff;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+    }
+}

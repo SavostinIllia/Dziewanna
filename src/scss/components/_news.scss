@@ -1,0 +1,65 @@
+#news {
+  padding-bottom: 20px;
+  .news__wrapper {
+    .news__products {
+      @include displayFlex(auto, center, center);
+      margin-left: -60px;
+      position: relative;
+
+      .news__product {
+        padding: 20px;
+        display: flex !important;
+        width: unset !important;
+        justify-content: center;
+        background: #eeeded;
+        position: relative;
+        margin-left: 60px;
+        min-height: 310px;
+        width: 33.333%;
+
+        &-img {
+          width: 100%;
+          max-width: 250px;
+          padding-bottom: 20px;
+        }
+
+        &-describe {
+          @include displayFlex;
+          background: #fff;
+          position: absolute;
+          bottom: -15px;
+          padding: 15px 0;
+        }
+      }
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        left: -35px;
+        border: none;
+        background: transparent;
+        outline: none;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          path {
+            @include animationTransition;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          @include animationTransition;
+          svg {
+            path {
+              fill: #0083af;
+            }
+          }
+        }
+      }
+      .slick-next {
+        right: -65px;
+        left: unset;
+      }
+    }
+  }
+}
